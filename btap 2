@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <string.h>
+void printMenu()
+{
+    printf("***************menu\n");
+    printf("nhap vao chuoi ky tu\n");
+    printf("in ra do dai chuoi va noi dung chuoi vao nhap\n");
+    printf("in ra chuoi dao nguoc\n");
+    printf("in ra so luong chu cai trong chuoi\n");
+    printf("in ra so luong chu so trong chuoi\n");
+    printf("in ra so luong ki tu dac biet\n");
+    printf("thoat");
+}
+int countLetters(char str[])
+{
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int countDigital(char str[])
+{
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] >= '0' && str[i] <= '9')
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int countChar(char str[])
+{
+    int count = 0;
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= '0' && str[i] <= '9'))
+        {
+            count++;
+        }
+    }
+    return count;
+}
+int main()
+{
+    char input[100];
+    int choice;
+    do
+    {
+        printMenu();
+        printf("lua chon cua ban la ");
+        scanf("%d", &choice);
+        switch (case)
+        {
+        case 1:
+            printf(" nhap vao chuoi ki tu");
+            scanf("%d", input);
+            break;
+        case 2:
+            printf("in ra do dai chuoi:%d\n", strlen[input]);
+            printf("noi dung cua chuoi:%s\n", input);
+            break;
+        case 3:
+            printf("in ra chuoi dao nguoc");
+            for (int i = strlen(input - 1); i >= 0; i--)
+            {
+                printf("%c", input[i]);
+            }
+            printf("\n");
+        case 4:
+            printf("in ra so luong chu cai trong chuoi", countLetters);
+            break;
+        case 5:
+            printf("in ra so luong chu so trong chuoi", countDigital);
+            break;
+        case 6:
+            printf("in ra so lượng cac ki tu dac biet", countChar);
+            break;
+        case 7:
+            printf("thoat");
+            break;
+        default:
+            printf("lua chon khong hop li");
+        }
+
+    } while (choice != 7) 
+        return 0;
+}
